@@ -332,6 +332,10 @@ CvCaptureCAM_V4L;
 
 static void icvCloseCAM_V4L( CvCaptureCAM_V4L* capture );
 
+static void queue_buff(CvCaptureCAM_V4L* capture);
+static void query_buff(CvCaptureCAM_V4L* capture);
+static void unmap_buff(CvCaptureCAM_V4L* capture);
+
 static int icvGrabFrameCAM_V4L( CvCaptureCAM_V4L* capture );
 static IplImage* icvRetrieveFrameCAM_V4L( CvCaptureCAM_V4L* capture, int );
 CvCapture* cvCreateCameraCapture_V4L( int index );
@@ -1665,10 +1669,32 @@ static int icvSetPropertyCAM_V4L(CvCaptureCAM_V4L* capture, int property_id, dou
         memset (&setfps, 0, sizeof(struct v4l2_streamparm));
         setfps.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
         setfps.parm.capture.timeperframe.numerator = 1;
+        
         setfps.parm.capture.timeperframe.denominator = value;
-        if (xioctl (capture->deviceHandle, VIDIOC_S_PARM, &setfps) < 0){
-            fprintf(stderr, "HIGHGUI ERROR: V4L: Unable to set camera FPS\n");
+    
+        capture->type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
+        // Stop the stream
+        if (xioctl(capture->deviceHandle, VIDIOC_STREAMOFF, &capture->type) < 0) {
+          perror ("Unable to stop the stream.");
+        }
+        // Unmap the buffers
+        unmap_buff(capture);
+        if (v4l2_ioctl (capture->deviceHandle, VIDIOC_S_PARM, &setfps) < 0){
+          fprintf(stderr, "HIGHGUI ERROR: V4L: Unable to set camera FPS\n");
+          retval=-1;
+        }else{
+          // Query the ongoing captures
+          query_buff(capture);
+          // And queue them
+          queue_buff(capture);
+
+          capture->type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
+          // Restart the stream
+          if (xioctl(capture->deviceHandle, VIDIOC_STREAMON, &capture->type) < 0) {
+            perror ("Unable to start the stream.");
+          } else{
             retval=0;
+          }
         }
         break;
     default:
@@ -1677,6 +1703,78 @@ static int icvSetPropertyCAM_V4L(CvCaptureCAM_V4L* capture, int property_id, dou
 
     /* return the the status */
     return retval;
+}
+
+static void query_buff( CvCaptureCAM_V4L* capture){
+
+  for (n_buffers = 0; n_buffers < capture->req.count; ++n_buffers){
+    struct v4l2_buffer buf;
+
+    buf.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
+    buf.memory = V4L2_MEMORY_MMAP;
+    buf.index = n_buffers;
+
+    if (-1 == xioctl (capture->deviceHandle, VIDIOC_QUERYBUF, &buf)) {
+      perror ("VIDIOC_QUERYBUF");
+       /* free capture, and returns an error code */
+      icvCloseCAM_V4L (capture);
+      return;
+    }
+
+    capture->buffers[n_buffers].length = buf.length;
+    capture->buffers[n_buffers].start =
+     v4l2_mmap (NULL /* start anywhere */,
+    buf.length,PROT_READ | PROT_WRITE /* required */,MAP_SHARED /* recommended */,capture->deviceHandle, buf.m.offset);
+
+    if (MAP_FAILED == capture->buffers[n_buffers].start) {
+      perror ("mmap");
+
+       /* free capture, and returns an error code */
+      icvCloseCAM_V4L (capture);
+      return;
+    }
+
+
+    if (n_buffers == 0) {
+      if (capture->buffers[MAX_V4L_BUFFERS].start) {
+        free(capture->buffers[MAX_V4L_BUFFERS].start);
+        capture->buffers[MAX_V4L_BUFFERS].start = NULL;
+      }
+
+      capture->buffers[MAX_V4L_BUFFERS].start = malloc(buf.length);
+      capture->buffers[MAX_V4L_BUFFERS].length = buf.length;
+    };
+
+  }
+
+}
+
+static void queue_buff(CvCaptureCAM_V4L* capture){
+  struct v4l2_buffer buf;
+
+  for (n_buffers = 0; n_buffers < capture->req.count; ++n_buffers){
+    buf.index = n_buffers;
+    buf.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
+    buf.memory = V4L2_MEMORY_MMAP;
+
+    memcpy(capture->buffers[MAX_V4L_BUFFERS].start,
+      capture->buffers[buf.index].start,
+      capture->buffers[MAX_V4L_BUFFERS].length );
+    capture->bufferIndex = MAX_V4L_BUFFERS;
+
+    if (-1 == xioctl (capture->deviceHandle, VIDIOC_QBUF, &buf)){
+      perror ("VIDIOC_QBUF");
+    }
+  
+  }
+}
+
+ static void unmap_buff(CvCaptureCAM_V4L* capture){
+  for (unsigned int n_buffers2 = 0; n_buffers2 < capture->req.count; ++n_buffers2) {
+    if (-1 == v4l2_munmap (capture->buffers[n_buffers2].start, capture->buffers[n_buffers2].length)) {
+      perror ("munmap");
+    }
+  }
 }
 
 static void icvCloseCAM_V4L( CvCaptureCAM_V4L* capture ){
