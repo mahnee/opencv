@@ -1530,8 +1530,16 @@ static int icvSetControl (CvCaptureCAM_V4L* capture, int property_id, double val
   v4l2_max = v4l2_get_ctrl_max(capture, capture->control.id);
 
   if ((v4l2_min == -1) && (v4l2_max == -1)) {
-    fprintf(stderr, "HIGHGUI ERROR: V4L: Property %s(%u) not supported by device\n", name, property_id);
+    if (capture->control.id==V4L2_CID_EXPOSURE){
+      sprintf(name, "Exposure");
+      capture->control.id = V4L2_CID_EXPOSURE_ABSOLUTE;
+      v4l2_min = v4l2_get_ctrl_min(capture, capture->control.id);
+      v4l2_max = v4l2_get_ctrl_max(capture, capture->control.id);
+    } else{
+      fprintf(stderr, "HIGHGUI ERROR: V4L: Property %s(%u) not supported by device\n", name, property_id);
     return -1;
+    }
+    
   }
 
   if(v4l2_ioctl(capture->deviceHandle, VIDIOC_G_CTRL, &capture->control) == 0) {
@@ -1555,9 +1563,25 @@ static int icvSetControl (CvCaptureCAM_V4L* capture, int property_id, double val
   /* try and set value as if it was a v4l2 device */
   c.id    = capture->control.id;
   c.value = ctrl_value;
+
+  if((capture->control.id==V4L2_CID_EXPOSURE_ABSOLUTE)&&(c.value<=1)){
+    c.id=V4L2_CID_EXPOSURE_AUTO;
+    c.value=3;
+    v4l2_ioctl(capture->deviceHandle, VIDIOC_S_CTRL, &c);
+    return 0;
+  }
+
   if (v4l2_ioctl(capture->deviceHandle, VIDIOC_S_CTRL, &c) != 0) {
     /* The driver may clamp the value or return ERANGE, ignored here */
-    if (errno != ERANGE) {
+    if((capture->control.id==V4L2_CID_EXPOSURE_ABSOLUTE)){
+      c.id=V4L2_CID_EXPOSURE_AUTO;
+      c.value=1;
+      v4l2_ioctl(capture->deviceHandle, VIDIOC_S_CTRL, &c);
+      c.id=V4L2_CID_EXPOSURE_ABSOLUTE;
+      c.value=ctrl_value;
+      v4l2_ioctl(capture->deviceHandle, VIDIOC_S_CTRL, &c);
+    }
+    else if (errno != ERANGE) {
       fprintf(stderr, "HIGHGUI ERROR: V4L2: Failed to set control \"%d\": %s (value %d)\n", c.id, strerror(errno), c.value);
       is_v4l2 = 0;
     } else {
