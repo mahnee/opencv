@@ -1337,8 +1337,14 @@ static double icvGetPropertyCAM_V4L (CvCaptureCAM_V4L* capture,
     /* all went well */
     is_v4l2_device = 1;
   } else {
+   if (capture->control.id==V4L2_CID_EXPOSURE){
+    is_v4l2_device = 1;
+    capture->control.id = V4L2_CID_EXPOSURE_ABSOLUTE;
+    
+  } else{
     fprintf(stderr, "HIGHGUI ERROR: V4L2: Unable to get property %s(%u) - %s\n", name, capture->control.id, strerror(errno));
   }
+}
 
   if (is_v4l2_device == 1) {
       /* get the min/max values */
