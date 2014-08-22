@@ -253,8 +253,8 @@ make & enjoy!
 #include <libv4l2.h>
 
 /* Defaults - If your board can do better, set it here.  Set for the most common type inputs. */
-#define DEFAULT_V4L_WIDTH  640
-#define DEFAULT_V4L_HEIGHT 480
+#define DEFAULT_V4L_WIDTH  800
+#define DEFAULT_V4L_HEIGHT 600
 
 #define CHANNEL_NUMBER 1
 #define MAX_CAMERAS 8
@@ -262,7 +262,7 @@ make & enjoy!
 
 // default and maximum number of V4L buffers, not including last, 'special' buffer
 #define MAX_V4L_BUFFERS 10
-#define DEFAULT_V4L_BUFFERS 4
+#define DEFAULT_V4L_BUFFERS 2
 
 // if enabled, copies data from the buffer. this uses a bit more memory,
 //  but much more reliable for some UVC cameras
