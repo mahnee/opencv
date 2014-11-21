@@ -250,8 +250,8 @@ make & enjoy!
 
 
 // default and maximum number of V4L buffers, not including last, 'special' buffer
-#define MAX_V4L_BUFFERS 10
-#define DEFAULT_V4L_BUFFERS 2
+#define MAX_V4L_BUFFERS 1
+#define DEFAULT_V4L_BUFFERS 1
 
 // if enabled, then bad JPEG warnings become errors and cause NULL returned instead of image
 #define V4L_ABORT_BADJPEG
