@@ -1,0 +1,11 @@
+9c4275e44a18c956bbfd42054d89e540  usr/include/opencv/cv.h
+047012a487c3c7d763230d9a915ca1a7  usr/include/opencv/cv.hpp
+576b7f66f7b5da97411df9a7901ecb98  usr/include/opencv/cvwimage.h
+9ac84cf2cd95818c060a4ccab74f90ac  usr/include/opencv/cxcore.h
+6813641d8ff4b368b6d610d7f12b01b0  usr/include/opencv/cxcore.hpp
+1c44c0c52db1a391d40fbfa222f14193  usr/include/opencv/cxeigen.hpp
+0a1cd675928b47704895742302cf65c2  usr/include/opencv/cxmisc.h
+ac1a04dbb8817b611f898164ef8ad437  usr/include/opencv/ml.h
+393fa5c496daac501422ae724aa9405e  usr/share/doc/libcv-dev/README.Debian
+f3c5604430f6d5e025f720d5f1e0bcf6  usr/share/doc/libcv-dev/changelog.Debian.gz
+891355b60a4c85791f19c69ee9c9aa3b  usr/share/doc/libcv-dev/copyright

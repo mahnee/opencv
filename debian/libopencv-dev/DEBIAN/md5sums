@@ -1,0 +1,15 @@
+203e239b76cabb961c061cb4271c8acc  usr/bin/opencv_createsamples
+eeb0e2ae06a9a168c2a604b98a4d7ab7  usr/bin/opencv_haartraining
+b2bece1612b6b02f2b43af60c4edfa00  usr/bin/opencv_performance
+7f3b6a490cb876a7655fd6351a346a05  usr/bin/opencv_traincascade
+7bf65118974ea3c832a260bb17fc876f  usr/lib/x86_64-linux-gnu/pkgconfig/opencv.pc
+aca32b049587b23aac19ae1c3987aee4  usr/share/OpenCV/OpenCVConfig-version.cmake
+d0ba4894c2f03e97a20bc3db5047b749  usr/share/OpenCV/OpenCVConfig.cmake
+af91008cd132720cc9a22126ad677a08  usr/share/OpenCV/OpenCVModules-release.cmake
+3b74b6006340cb40e12c79fc7c984f4f  usr/share/OpenCV/OpenCVModules.cmake
+f3c5604430f6d5e025f720d5f1e0bcf6  usr/share/doc/libopencv-dev/changelog.Debian.gz
+891355b60a4c85791f19c69ee9c9aa3b  usr/share/doc/libopencv-dev/copyright
+560d2a8f7d81866c0eb24c490874b079  usr/share/man/man1/opencv_createsamples.1.gz
+d8b74b1f28a0c8e52c183a3340a1bbf3  usr/share/man/man1/opencv_haartraining.1.gz
+a6f4600fe0d318d06b254c6d6ed16716  usr/share/man/man1/opencv_performance.1.gz
+791d9b46082d16bc1ca3b41656c07f09  usr/share/man/man1/opencv_traincascade.1.gz

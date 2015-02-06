@@ -1,0 +1,5 @@
+java:Depends=
+java:Recommends=
+misc:Pre-Depends=multiarch-support
+shlibs:Depends=libc6 (>= 2.2.5), libgcc1 (>= 1:4.1.1), libopencv-core2.4, libopencv-gpu2.4, libopencv-highgui2.4, libopencv-imgproc2.4, libopencv-ocl2.4, libopencv-video2.4, libstdc++6 (>= 4.1.1)
+misc:Depends=

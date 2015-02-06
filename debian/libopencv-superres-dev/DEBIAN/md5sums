@@ -1,0 +1,6 @@
+8b132d68b783c57b7bcb7a824b3f26d6  usr/include/opencv2/superres/optical_flow.hpp
+f5755fc2b0754d1dfe1c78c48618161f  usr/include/opencv2/superres/superres.hpp
+9b57212931eee8e0677a2446583b1f62  usr/lib/x86_64-linux-gnu/libopencv_superres.a
+393fa5c496daac501422ae724aa9405e  usr/share/doc/libopencv-superres-dev/README.Debian
+f3c5604430f6d5e025f720d5f1e0bcf6  usr/share/doc/libopencv-superres-dev/changelog.Debian.gz
+891355b60a4c85791f19c69ee9c9aa3b  usr/share/doc/libopencv-superres-dev/copyright

@@ -1,0 +1,4 @@
+63cbae1d1be283300a2dffe61ed2445a  usr/lib/jni/libopencv_java249.so
+f3c5604430f6d5e025f720d5f1e0bcf6  usr/share/doc/libopencv2.4-jni/changelog.Debian.gz
+891355b60a4c85791f19c69ee9c9aa3b  usr/share/doc/libopencv2.4-jni/copyright
+8c7061e1dec0917ba8e5b09c1671b6b9  usr/share/lintian/overrides/libopencv2.4-jni

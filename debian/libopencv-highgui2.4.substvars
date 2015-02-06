@@ -1,0 +1,5 @@
+java:Depends=
+java:Recommends=
+misc:Pre-Depends=multiarch-support
+shlibs:Depends=libavcodec54 (>= 6:9.1-1) | libavcodec-extra-54 (>= 6:9.16), libavformat54 (>= 6:9.1-1), libavutil52 (>= 6:9.1-1), libc6 (>= 2.15), libdc1394-22, libgcc1 (>= 1:4.1.1), libgl1-mesa-glx | libgl1, libglib2.0-0 (>= 2.31.8), libgtk2.0-0 (>= 2.8.0), libgtkglext1, libilmbase6 (>= 1.0.1), libjasper1, libjpeg8 (>= 8c), libopencv-core2.4, libopencv-imgproc2.4, libopenexr6 (>= 1.6.1), libpng12-0 (>= 1.2.13-4), libstdc++6 (>= 4.1.1), libswscale2 (>= 6:9.1-1), libtiff5 (>= 4.0.3), libv4l-0 (>= 0.5.0)
+misc:Depends=

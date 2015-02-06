@@ -1,0 +1,6 @@
+99793bc40423b2743d582dcac4cbdcbc  usr/include/opencv2/ocl/matrix_operations.hpp
+8691724d84a2104a667f4273d1cd8388  usr/include/opencv2/ocl/ocl.hpp
+753218435e6f0c3721e15ea3a3f810fa  usr/lib/x86_64-linux-gnu/libopencv_ocl.a
+393fa5c496daac501422ae724aa9405e  usr/share/doc/libopencv-ocl-dev/README.Debian
+f3c5604430f6d5e025f720d5f1e0bcf6  usr/share/doc/libopencv-ocl-dev/changelog.Debian.gz
+891355b60a4c85791f19c69ee9c9aa3b  usr/share/doc/libopencv-ocl-dev/copyright

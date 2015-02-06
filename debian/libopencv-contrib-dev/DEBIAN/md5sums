@@ -1,0 +1,9 @@
+9cbed0b6a31369185c94081ddc477d6e  usr/include/opencv2/contrib/contrib.hpp
+fc9079a68b22682b7677ea48f9c17aeb  usr/include/opencv2/contrib/detection_based_tracker.hpp
+880f5476977ddda1e43ff271e1280edc  usr/include/opencv2/contrib/hybridtracker.hpp
+47041efe81f801ff9c442f1ae8520072  usr/include/opencv2/contrib/openfabmap.hpp
+0758fe4178becd4026d3b5847be948a8  usr/include/opencv2/contrib/retina.hpp
+57943b900ae4e4ad8d6c9f4e36c25d3a  usr/lib/x86_64-linux-gnu/libopencv_contrib.a
+393fa5c496daac501422ae724aa9405e  usr/share/doc/libopencv-contrib-dev/README.Debian
+f3c5604430f6d5e025f720d5f1e0bcf6  usr/share/doc/libopencv-contrib-dev/changelog.Debian.gz
+891355b60a4c85791f19c69ee9c9aa3b  usr/share/doc/libopencv-contrib-dev/copyright

@@ -1,0 +1,4 @@
+usr/include/opencv2/stitching/*
+usr/lib/*/libopencv_stitching.a
+usr/lib/*/libopencv_stitching.so
+usr/lib/*/libopencv_nonfree.so

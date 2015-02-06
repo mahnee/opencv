@@ -1,0 +1,9 @@
+b2397a7d1be87f4c8073bad94fd1455e  usr/include/opencv2/ts/gpu_perf.hpp
+3985d66b0321f9688448e46cfb87a6d3  usr/include/opencv2/ts/gpu_test.hpp
+f4c6983975c2e0b1aaa42fdec5dc327c  usr/include/opencv2/ts/ts.hpp
+7b8f47fd71b6bc84ec1ea88a0c3c95d2  usr/include/opencv2/ts/ts_gtest.h
+4d1a7808a56f07151b8f383477dcbfe8  usr/include/opencv2/ts/ts_perf.hpp
+590ac29af494e97d84f13adb14ea1d9e  usr/lib/x86_64-linux-gnu/libopencv_ts.a
+393fa5c496daac501422ae724aa9405e  usr/share/doc/libopencv-ts-dev/README.Debian
+f3c5604430f6d5e025f720d5f1e0bcf6  usr/share/doc/libopencv-ts-dev/changelog.Debian.gz
+891355b60a4c85791f19c69ee9c9aa3b  usr/share/doc/libopencv-ts-dev/copyright

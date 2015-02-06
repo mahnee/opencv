@@ -1,0 +1,8 @@
+b7a4591d02311cf3b3f8d8f8b89f9af6  usr/include/opencv2/highgui/cap_ios.h
+9ea8c6ab97fa04f42ba24675abbb90db  usr/include/opencv2/highgui/highgui.hpp
+de847db10b117734fa15094b5e279419  usr/include/opencv2/highgui/highgui_c.h
+ef9b7bedbc4561c7d2c8723454572a1d  usr/include/opencv2/highgui/ios.h
+ad93be05d4ad4ad9093ff3d0ecf7f4e7  usr/lib/x86_64-linux-gnu/libopencv_highgui.a
+393fa5c496daac501422ae724aa9405e  usr/share/doc/libopencv-highgui-dev/README.Debian
+f3c5604430f6d5e025f720d5f1e0bcf6  usr/share/doc/libopencv-highgui-dev/changelog.Debian.gz
+891355b60a4c85791f19c69ee9c9aa3b  usr/share/doc/libopencv-highgui-dev/copyright

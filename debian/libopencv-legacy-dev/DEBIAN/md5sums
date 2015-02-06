@@ -1,0 +1,8 @@
+b13c300e6afd89c3e55b885855536099  usr/include/opencv2/legacy/blobtrack.hpp
+2c7bb4b9577f712a705fe39f18b1dcc2  usr/include/opencv2/legacy/compat.hpp
+65c08404c39bb18fd28161372e540347  usr/include/opencv2/legacy/legacy.hpp
+72db8da288abd78e061d040c72e740ea  usr/include/opencv2/legacy/streams.hpp
+478bfbd1697951c8901cef8bcf69f6f6  usr/lib/x86_64-linux-gnu/libopencv_legacy.a
+393fa5c496daac501422ae724aa9405e  usr/share/doc/libopencv-legacy-dev/README.Debian
+f3c5604430f6d5e025f720d5f1e0bcf6  usr/share/doc/libopencv-legacy-dev/changelog.Debian.gz
+891355b60a4c85791f19c69ee9c9aa3b  usr/share/doc/libopencv-legacy-dev/copyright

@@ -1,0 +1,7 @@
+e153b81fdef30ab209bbba1f809d62b9  usr/include/opencv2/imgproc/imgproc.hpp
+97db595f6bbf3fbfea21c2b3e47180d6  usr/include/opencv2/imgproc/imgproc_c.h
+491c6bf91d729c64d982252dc542808a  usr/include/opencv2/imgproc/types_c.h
+41f085e8dd87a99fd8ee3747c2991a46  usr/lib/x86_64-linux-gnu/libopencv_imgproc.a
+393fa5c496daac501422ae724aa9405e  usr/share/doc/libopencv-imgproc-dev/README.Debian
+f3c5604430f6d5e025f720d5f1e0bcf6  usr/share/doc/libopencv-imgproc-dev/changelog.Debian.gz
+891355b60a4c85791f19c69ee9c9aa3b  usr/share/doc/libopencv-imgproc-dev/copyright

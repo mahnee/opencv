@@ -1,0 +1,23 @@
+Package: libopencv2.4-java
+Source: opencv
+Version: 2.4.9.1-1
+Architecture: all
+Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
+Installed-Size: 484
+Depends: libopencv2.4-jni (>= 2.4.9.1-1)
+Section: java
+Priority: optional
+Homepage: http://opencv.org/
+Description: Java bindings for the computer vision library
+ This package contains Java bindings for the OpenCV (Open Computer Vision)
+ library.
+ .
+ The Open Computer Vision Library is a collection of algorithms and sample
+ code for various computer vision problems. The library is compatible with
+ IPL (Intel's Image Processing Library) and, if available, can use IPP
+ (Intel's Integrated Performance Primitives) for better performance.
+ .
+ OpenCV provides low level portable data types and operators, and a set
+ of high level functionalities for video acquisition, image processing and
+ analysis, structural analysis, motion analysis and object tracking, object
+ recognition, camera calibration and 3D reconstruction.

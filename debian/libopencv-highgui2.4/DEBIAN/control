@@ -1,0 +1,25 @@
+Package: libopencv-highgui2.4
+Source: opencv
+Version: 2.4.9.1-1
+Architecture: amd64
+Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
+Installed-Size: 340
+Pre-Depends: multiarch-support
+Depends: libavcodec54 (>= 6:9.1-1) | libavcodec-extra-54 (>= 6:9.16), libavformat54 (>= 6:9.1-1), libavutil52 (>= 6:9.1-1), libc6 (>= 2.15), libdc1394-22, libgcc1 (>= 1:4.1.1), libgl1-mesa-glx | libgl1, libglib2.0-0 (>= 2.31.8), libgtk2.0-0 (>= 2.8.0), libgtkglext1, libilmbase6 (>= 1.0.1), libjasper1, libjpeg8 (>= 8c), libopencv-core2.4, libopencv-imgproc2.4 (= 2.4.9.1-1), libopenexr6 (>= 1.6.1), libpng12-0 (>= 1.2.13-4), libstdc++6 (>= 4.1.1), libswscale2 (>= 6:9.1-1), libtiff5 (>= 4.0.3), libv4l-0 (>= 0.5.0)
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: http://opencv.org/
+Description: computer vision High-level GUI and Media I/O library
+ This package contains the OpenCV (Open Computer Vision) High-level GUI
+ and Media I/O runtime libraries.
+ .
+ The Open Computer Vision Library is a collection of algorithms and sample
+ code for various computer vision problems. The library is compatible with
+ IPL (Intel's Image Processing Library) and, if available, can use IPP
+ (Intel's Integrated Performance Primitives) for better performance.
+ .
+ OpenCV provides low level portable data types and operators, and a set
+ of high level functionalities for video acquisition, image processing and
+ analysis, structural analysis, motion analysis and object tracking, object
+ recognition, camera calibration and 3D reconstruction.

@@ -1,0 +1,26 @@
+Package: python-opencv
+Source: opencv
+Version: 2.4.9.1-1
+Architecture: amd64
+Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
+Installed-Size: 1473
+Depends: python (>= 2.7~), python:any (>= 2.7.5-5~), python (<< 2.8), libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libopencv-calib3d2.4, libopencv-contrib2.4, libopencv-core2.4, libopencv-features2d2.4, libopencv-flann2.4, libopencv-highgui2.4, libopencv-imgproc2.4, libopencv-legacy2.4, libopencv-ml2.4, libopencv-objdetect2.4, libopencv-photo2.4, libopencv-stitching2.4, libopencv-video2.4, libpython2.7 (>= 2.7), libstdc++6 (>= 4.1.1), python-numpy-abi9, python-numpy (>= 1:1.6.1)
+Conflicts: python2.3-opencv (<= 0.9.7-3)
+Replaces: python2.3-opencv (<= 0.9.7-3)
+Provides: python2.7-opencv
+Section: python
+Priority: optional
+Homepage: http://opencv.org/
+Description: Python bindings for the computer vision library
+ This package contains Python bindings for the OpenCV (Open Computer Vision)
+ library.
+ .
+ The Open Computer Vision Library is a collection of algorithms and sample
+ code for various computer vision problems. The library is compatible with
+ IPL (Intel's Image Processing Library) and, if available, can use IPP
+ (Intel's Integrated Performance Primitives) for better performance.
+ .
+ OpenCV provides low level portable data types and operators, and a set
+ of high level functionalities for video acquisition, image processing and
+ analysis, structural analysis, motion analysis and object tracking, object
+ recognition, camera calibration and 3D reconstruction.

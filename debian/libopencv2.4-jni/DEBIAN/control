@@ -1,0 +1,23 @@
+Package: libopencv2.4-jni
+Source: opencv
+Version: 2.4.9.1-1
+Architecture: amd64
+Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
+Installed-Size: 674
+Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libopencv-calib3d2.4 (= 2.4.9.1-1), libopencv-contrib2.4 (= 2.4.9.1-1), libopencv-core2.4, libopencv-features2d2.4, libopencv-highgui2.4 (= 2.4.9.1-1), libopencv-imgproc2.4, libopencv-ml2.4 (= 2.4.9.1-1), libopencv-objdetect2.4 (= 2.4.9.1-1), libopencv-photo2.4 (= 2.4.9.1-1), libopencv-stitching2.4, libopencv-video2.4 (= 2.4.9.1-1), libstdc++6 (>= 4.1.1)
+Section: devel
+Priority: optional
+Homepage: http://opencv.org/
+Description: Java jni library for the computer vision library
+ This package contains Java jni library for the OpenCV (Open Computer Vision)
+ library.
+ .
+ The Open Computer Vision Library is a collection of algorithms and sample
+ code for various computer vision problems. The library is compatible with
+ IPL (Intel's Image Processing Library) and, if available, can use IPP
+ (Intel's Integrated Performance Primitives) for better performance.
+ .
+ OpenCV provides low level portable data types and operators, and a set
+ of high level functionalities for video acquisition, image processing and
+ analysis, structural analysis, motion analysis and object tracking, object
+ recognition, camera calibration and 3D reconstruction.

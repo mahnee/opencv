@@ -1,0 +1,7 @@
+2f29a9e86cf5188e90b5a2e80f4d6991  usr/include/opencv2/video/background_segm.hpp
+c7bee36341c360e9991ea2524b46df3c  usr/include/opencv2/video/tracking.hpp
+f82d450e0765b4ddcf7640f7d3207146  usr/include/opencv2/video/video.hpp
+40812c3c25c255de214a4c9a46ba9050  usr/lib/x86_64-linux-gnu/libopencv_video.a
+393fa5c496daac501422ae724aa9405e  usr/share/doc/libopencv-video-dev/README.Debian
+f3c5604430f6d5e025f720d5f1e0bcf6  usr/share/doc/libopencv-video-dev/changelog.Debian.gz
+891355b60a4c85791f19c69ee9c9aa3b  usr/share/doc/libopencv-video-dev/copyright
